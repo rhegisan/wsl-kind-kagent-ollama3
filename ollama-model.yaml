@@ -20,16 +20,16 @@ spec:
           - |
             ollama serve &
             sleep 10
-            ollama pull llama3
+            ollama pull llama3.2
             pkill ollama
         volumeMounts:
         - name: ollama-data
           mountPath: /root/.ollama
         resources:
           requests:
-            memory: "4Gi"
-          limits:
             memory: "8Gi"
+          limits:
+            memory: "12Gi"
       containers:
       - name: ollama
         image: ollama/ollama:latest
@@ -42,9 +42,9 @@ spec:
           mountPath: /root/.ollama
         resources:
           requests:
-            memory: "4Gi"
-          limits:
             memory: "8Gi"
+          limits:
+            memory: "12Gi"
       volumes:
       - name: ollama-data
         emptyDir: {}

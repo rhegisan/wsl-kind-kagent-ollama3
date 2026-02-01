@@ -12,7 +12,7 @@ Adequate CPU and memory (local LLMs are resource intensive)
 
 
 Step 1: Deploy Ollama and LLaMA Model
-kubectl apply -f ollama-model.yaml
+kubectl apply -f   ollama-model.yaml
 
 Note: Increase CPU and memory limits in ollama-model.yaml for better performance.
 
